@@ -1,0 +1,1001 @@
+<!-- This website was built through the collaboration of Capstone C12-03 members. Using syncfiddle.net, Wicreate modules, and online tutorials, we were able to collaborate the making of HTML, CSS, and Javascript  code from scratch. No drag-and-drop website builders were used in the process (syncfiddle.net is a website used only for collaborative HTML making and does not have drag-and-drop website creation features). All images and icons used are free to use and free from copyright (see unsplash.io, gratisography.com, and lineicons.com guidelines) -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forden Co TrashBuddy Application</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Forden Co Trashbuddy" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#smart").on('change', function(){
+          $(".smart-content").hide();
+          $("#" + $(this).val()).fadeIn(700);
+        }).change();
+      });
+      
+    </script>
+    <style>
+      :root {
+      --green : #136207;
+      --white : #FFFDFD;
+      --whiteish : #EAEAEA;
+      --khaki: #EDE6D6;
+      --gold : #CC9A02;
+      --light-gold : #D8B238;
+      --light-green : #5A9151;
+      --gray : #aaaaaa;
+      --dark-gray: #303841;
+      }
+      *, *::before, *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      }
+      html {
+      scroll-behavior: smooth;
+      font-family: "Roboto", "Helvetica Neue", sans-serif;
+      font-size: 62.5%;
+      }
+      h1 {
+      font-size: 5.5rem;
+      }
+      h2{
+      font-size: 4.5rem;
+      }
+      h3 {
+      font-size: 3.5rem;
+      }
+      h4 {
+      font-size: 2.5rem;
+      }
+      h5 {
+      font-size: 2.2rem;
+      }
+      p {
+      font-size: 1.75rem;
+      }
+      .header {
+      box-shadow: 0 0.5rem 1rem #000;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      position: fixed;
+      display: flex;
+      background-color: var(--white);
+      width: 100vw;
+      color: white;
+      justify-content: space-between;
+      align-items: center;
+      }
+      .title {
+      margin-left: 5rem;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      transition: transform 250ms ease-in-out;
+      }
+      .title:hover {
+      transform: scaleY(1.1)
+      }
+      .title a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      }
+      .namesake {
+      display: inline;
+      font-family: "Bebas Neue";
+      text-decoration: none;
+      color: black;
+      font-size: 5rem;
+      white-space: nowrap;
+      }
+      .small-logo{
+      width: auto;
+      height: 5.5rem;
+      }
+      .nav-list {
+      list-style: none;
+      display: flex;
+      margin: 2rem;
+      }
+      .nav-list a {
+      font-family: "Montserrat";
+      text-decoration: none;
+      color: black;
+      font-size: 2.5rem;
+      padding: 1rem 2rem;
+      margin-right: 2rem;
+      border-radius: 1rem;
+      transition: color 250ms ease-in-out;
+      transition: text-shadow 250ms ease-in-out;
+      transition: background-color 250ms ease-in-out;
+      white-space: nowrap;
+      }
+      .nav-list a:hover, .nav-list a:active {
+      color: var(--white);
+      background-color: var(--green);
+      text-shadow: 0.1rem 0.1rem 0px #000;
+      }
+      .mission-vision {
+      background-image: url(https://images.unsplash.com/photo-1493957988430-a5f2e15f39a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right bottom;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(1000px, 1fr) minmax(225px, 500px);
+      justify-content: center;
+      align-items: center;
+      grid-gap: 3rem;
+      padding: 10rem 5rem 10rem 5rem;
+      }
+      .big-logo {
+      opacity: 0.90;
+      width: 100%;
+      object-fit: cover;
+      transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+      }
+      .big-logo:hover {
+      opacity: 1;
+      transform: scale(1.05);
+      }
+      .mission-vision h2 {
+      font-family: "Montserrat";
+      }
+      .mission-vision h3 {
+      font-family: "Roboto";
+      font-weight: 200;
+      }
+      .mission-vision h4 {
+      font-family: "Roboto";
+      font-weight: 200;
+      padding: 0rem 0rem 0rem 0rem;
+      }
+      .mission-vision-text {
+      background-color: rgba(235, 235, 235, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: center;
+      box-shadow: 0 0 0 black;
+      transition: box-shadow 100ms ease-in, border 0ms, background-color 100ms ease-in;
+      padding: 2rem;
+      }
+      .strive {
+      padding-top: 1rem;
+      }
+      .mission-vision-text:hover {
+      background-color: var(--khaki);
+      box-shadow: 5px 5px 5px black;
+      border: 2px solid var(--gray);
+      border-style: solid none none solid;
+      border-radius: 5px;
+      }
+      .objectives {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 1rem;
+      padding: 0.5rem;
+      }
+      .objective-column {
+      text-align: center;
+      }
+      .objective-column i {
+      font-size: 5rem;
+      }
+      .objective-column p {
+      padding-top: 0.5rem;
+      }
+      .paddingtop {
+      margin-top: 0.5rem;
+      }
+      .background-bg {
+      padding: 5rem 5rem 10rem 5rem;
+      background-image: url(https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+      background-position: center;
+      background-color: var(--light-green);
+      background-blend-mode: multiply;
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      .background-bg > h2 {
+      font-family: "Montserrat";
+      border: 5px solid var(--whiteish);
+      border-style: none none solid none;
+      box-shadow: 0px 2px 0px black;
+      color: var(--whiteish);
+      text-shadow: 3px 3px black;
+      text-align: center;
+      margin: 1.5rem;
+      }
+      .background-container {
+      width: 100%;
+      max-width: 1280px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-gap: 4rem;
+      }
+      .card {
+      background-color: #404040;
+      color: var(--whiteish);
+      text-shadow: 2px 2px 3px black;
+      border: 2px solid var(--light-gold);
+      border-radius: 0.5rem;
+      box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+      transition: transform 100ms ease-in-out;
+      }
+      .card:hover, .card:active {
+      transform: scale(1.05);
+      }
+      .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--whiteish);
+      padding: 1rem;
+      }
+      .card-thumbnail {
+      width: 100%;
+      object-fit: cover;
+      }
+      .card-content {
+      padding: 2rem;
+      }
+      .trashbuddy-bg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem;
+      background-color: #0B6B33;
+      background-size: cover;
+      background-repeat: no-repeat;
+      }
+      .trashbuddy-content {
+      max-width: 1280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      }
+      .trashbuddy-content h2 {
+      color: var(--whiteish);
+      font-family: "Montserrat";
+      text-shadow: 3px 3px black;
+      text-align: center;
+      }
+      .trashbuddy-content h4 {
+      color: var(--whiteish);
+      font-family: "Montserrat";
+      text-shadow: 1.5px 1.5px black;
+      text-align: center;
+      }
+      .trashbuddy-logo {
+      margin: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0rem 0rem 1rem 0.5rem rgba(0, 0, 0, 0.6);
+      height: auto;
+      width: 70%;
+      transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+      }
+      .trashbuddy-logo:hover {
+      box-shadow: 0rem 0rem 1rem 0.75rem rgba(205, 155, 5, 0.8);
+      transform: scale(1.05);
+      }
+      .features-bg {
+      padding: 7rem 3rem 10rem 7rem;
+      background-image: url(https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+      background-position: right bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      }
+      .features-bg > h2 {
+      text-align: center;
+      }
+      .features-container {
+      grid-gap: 0.5rem;
+      display: grid;
+      max-width: 1280px;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      grid-template-rows: repeat(3, minmax(225px, 1fr));
+      justify-content: center;
+      align-items: center;
+      }
+      .feature-text {
+      }
+      .feature-image {
+      max-width: 90%;
+      object-fit: cover;
+      }
+      .trashbuddy-video-bg{
+      background-image: url(https://images.unsplash.com/photo-1592860629622-f026b9c863f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1933&q=80);
+      background-position: top center;
+      background-color: var(--gold);
+      background-blend-mode: multiply;
+      padding: 7rem 0 7rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      }
+      .trashbuddy-video-bg > h2 {
+      font-family: "Montserrat";
+      color: var(--whiteish);
+      text-shadow: 3px 3px black;
+      text-align: center;
+      margin: 1.5rem;
+      }
+      .trashbuddy-video {
+      position: relative;
+      height: 60%;
+      width: 60%;
+      }
+      .iframe-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-bottom: 56.5%;
+      height: 0;
+      }
+      .iframe-container > iframe{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      }
+      .bmc-bg {
+      color: var(--whiteish);
+      text-shadow: 3px 3px 0px black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem;
+      background-color: var(--gold);
+      background-position: bottom right;
+      }
+      .bmc-content {
+      text-align: center;
+      max-width: 1000px;
+      font-family: "montserrat";
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      }
+      .bmc-pic {
+      box-shadow: 0rem 0rem 1rem 0.5rem rgba(0, 0, 0, 0.6);
+      border: 1rem solid var(--gold);
+      border-radius: 1rem;
+      margin-top: 5rem;
+      width: 40%;
+      height: auto;
+      transition: transform 150ms ease-in;
+      }
+      .bmc-pic:hover {
+      transform: scale(1.1);
+      color: #2753f4;
+      background-blend-mode: multiply;
+      }
+      .smart-bg {
+      background-image: url(https://images.unsplash.com/photo-1494185728463-86366f396213?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+      background-size: cover;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-color: var(--whiteish);
+      background-blend-mode: multiply;
+      display: flex;
+      min-height: 80vh;
+      flex-direction: column;
+      padding: 7rem 3rem 7rem 3rem;
+      align-items: center;
+      justify-content: center;
+      }
+      .smart-bg h2 {
+      text-shadow: 2px 2px 0px var(--whiteish);
+      font-family: "Montserrat";
+      text-align: center;
+      }
+      .smart-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      max-width: 1280px;
+      }
+      select {
+      width: 100%;
+      padding: 1rem 3rem 1rem 3rem;
+      font-size: 3rem;
+      border: none;
+      border-radius: 5px;
+      border: 5px solid var(--light-green);
+      font-family: "Montserrat";
+      font-weight: 800;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: box-shadow 250ms ease-in-out;
+      }
+      select:hover, select:active {
+      box-shadow: 0px 5px 5px rgba(0, 97, 255, 0.5);
+      }
+      .smart-content-container {
+      margin: 3rem 0px;
+      }
+      .smart-content {
+      text-align: center;
+      color: black;
+      font-weight: 100;
+      text-shadow: 1px 1px 0px white;
+      border-radius: 10px;
+      border: 6px solid var(--light-green);
+      background-image: radial-gradient(var(--whiteish), var(--khaki));
+      padding: 2rem 5rem;
+      box-shadow: 7px 3px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.5);
+      }
+      .smart-content i {
+      font-size: 50px;
+      justify-self: center;
+      align-self: center;
+      }
+      .smart-content {
+      display: none;
+      }
+      .sdg-bg {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: url(https://images.unsplash.com/photo-1518833500287-51ca0f2b1a0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: var(--light-green);
+      background-blend-mode: multiply;
+      }
+      .sdg-bg > h2 {
+      margin-bottom: 3rem;
+      max-width: 1280px;
+      color: var(--whiteish);
+      text-shadow: 3px 3px 0px black;
+      font-family: "Montserrat";
+      text-align: center;
+      }
+      .sdg-content {
+      display: grid;
+      grid-template-areas: "A A A B B B"
+      "C C D D E E";
+      max-width: 1280px;
+      }
+      .sdg-card {
+      justify-content: center;
+      text-shadow: 2px 2px 3px black;
+      color: var(--whiteish);
+      border: 1rem solid var(--green);
+      border-radius: 2rem;
+      box-shadow: 0.75rem 0.75rem 1rem 0.6rem rgba(0, 0, 0, 0.6);
+      text-align: center;
+      margin: 1.5rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 275px;
+      transition: background 500ms linear, transform 250ms ease-in-out;
+      }
+      .sdg-card > i {
+      font-size: 3rem;
+      margin-top: 0.5rem;
+      }
+      .sdg-content > a {
+      text-decoration: none;
+      }
+      .sdg-card > h5 {
+      margin-top: 1.5rem;
+      }
+      .A {
+      grid-area: A;
+      }
+      .B {
+      grid-area: B;
+      }
+      .C {
+      grid-area: C;
+      }
+      .D {
+      grid-area: D;
+      }
+      .E {
+      grid-area: E;
+      }
+      .sdg-card1 {
+      background-color: #4CA146;
+      }
+      .sdg-card2 {
+      background-color: #F89D2A;
+      }
+      .sdg-card3 {
+      background-color: #BF8D2C;
+      }
+      .sdg-card4 {
+      background-color: #407F46;
+      }
+      .sdg-card5{
+      background-color: #59BA48;
+      }
+      .sdg-card1:hover {
+      background: url(https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) top left/cover no-repeat;
+      transform: scale(1.05);
+      }
+      .sdg-card2:hover {
+      background: url(https://images.unsplash.com/photo-1593947593622-43676fb47751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) top left/cover no-repeat;
+      transform: scale(1.05);
+      }
+      .sdg-card3:hover {
+      background: url(https://images.unsplash.com/photo-1624030999824-b95d84549017?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80) top left/cover no-repeat;
+      transform: scale(1.05);
+      }
+      .sdg-card4:hover {
+      background: url(https://images.unsplash.com/photo-1534709153997-d6659469f951?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80 ) top left/cover no-repeat;
+      transform: scale(1.05);
+      }
+      .sdg-card5:hover {
+      background: url(https://images.unsplash.com/photo-1457530378978-8bac673b8062?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) top left/cover no-repeat;
+      transform: scale(1.05);
+      }
+      .download-bg {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      background-color: #0B6B33;
+      padding: 5rem;
+      }
+      .download-content {
+      max-width: 1280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--whiteish);
+      font-family: "Montserrat";
+      text-shadow: 3px 3px black;
+      text-align: center;
+      }
+      .download-content > a {
+      text-decoration: none;
+      color: inherit;
+      }
+      .download-button {
+      margin: 3rem;
+      padding: 2rem;
+      min-width: 300px;
+      background-color: var(--light-green);
+      border-radius: 2rem;
+      }
+      .download-button {
+      border: 0.5rem solid black;
+      box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.6), -0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.6);
+      transition: box-shadow 250ms ease-out;
+      }
+      .download-button:hover {
+      box-shadow: 0.25rem 0.25rem 1rem rgba(2, 71, 211, 0.6), -0.25rem 0.25rem 1rem rgba(2, 71, 211, 0.6);
+      }
+      .trashbuddy-logo-download {
+      box-shadow: 0px 0px 5px 1px black;
+      width: 75%;
+      height: auto;
+      }
+      .aboutus-bg {
+      padding: 3rem 3rem 7rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: var(--gold);
+      background-blend-mode: multiply;
+      }
+      .aboutus-content {
+      max-width: 1280px;
+      text-align: center;
+      color: var(--whiteish);
+      font-family: "Montserrat";
+      text-shadow: 3px 3px black;
+      text-align: center;
+      }
+      .aboutus-content > h3 {
+      padding-top: 3rem;
+      }
+      .footer {
+      display: flex;
+      justify-content: space-between;
+      z-index: -999;
+      font-size: 5rem;
+      width: 100%;
+      padding: 2rem 2rem 4rem 2rem;
+      background-color: var(--gray);
+      border-top: 3px solid var(--dark-gray);
+      }
+      @media (max-width: 1200px) {
+      .title {
+      display: none;
+      }
+      html {
+      font-size: 55%;
+      }
+      .mission-vision {
+      display: grid;
+      grid-template-columns: none;
+      grid-template-rows: auto 1fr;
+      align-items: center;
+      justify-content: center;
+      }
+      .mission-vision-text {
+      background-color: rgba(235, 235, 235, 0.95);
+      }
+      .header {
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-evenly;
+      }
+      .nav-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      }
+      .nav-list a {
+      font-size: 4rem;
+      padding: 1rem;
+      }
+      .sdg-content {
+      display: flex;
+      max-width: 1280px;
+      flex-direction: column;
+      }
+      .sdg-card {
+      min-height: 150px;
+      }
+      .background-container {
+      display: flex;
+      max-width: 1280px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      }
+      }
+      @media (max-width: 800px) {
+      .title {
+      display: none;
+      }
+      html {
+      font-size: 50%;
+      }
+      .mission-vision {
+      display: grid;
+      grid-template-columns: none;
+      grid-template-rows: auto 1fr;
+      align-items: center;
+      justify-content: center;
+      }
+      .mission-vision-text {
+      background-color: rgba(235, 235, 235, 0.95);
+      }
+      .header {
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-evenly;
+      }
+      .nav-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      }
+      .nav-list a {
+      font-size: 4rem;
+      padding: 0.5rem;
+      }
+      .sdg-content {
+      display: flex;
+      max-width: 1280px;
+      flex-direction: column;
+      }
+      .sdg-card {
+      min-height: 150px;
+      }
+      .background-container {
+      display: flex;
+      max-width: 1280px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="title">
+        <a href="#company">
+          <img src="https://i.imgur.com/mEFBsDE.png" alt="Forden Co. Logo" class="small-logo" />
+          <h2 class="namesake">
+            Forden Co.
+          </h2>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li>
+            <a href="#background-bg">Background</a>
+          </li>
+          <li>
+            <a href="#trashbuddy">TrashBuddy</a>
+          </li>
+          <li><a href="#aboutus">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="fordenpage">
+        <div class="mission-vision" id="company">
+          <div class="mission-vision-text">
+            <h2 class="name">Technologies for the Environment.</h2>
+            <h4>- Forden Co.</h4>
+            <h4 class="paddingtop"><strong>MISSION</strong></h4>
+            <p>
+              Forden Co. is a company dedicated to designing user-friendly applications for the environment - offering quality technologies and giving utmost importance to accessibility and convenience to our users.
+            </p>
+            <h4 class="paddingtop"><strong>VISION</strong></h4>
+            <p>
+              Forden Co. is a technologically centered company dedicated to becoming warriors against environmental degradation and stewards of God’s creation by providing its users with the best opportunity to grow as a person and as a protector of the environment, for the environment.
+            </p>
+            <h3 class="strive">What we strive to achieve:</h3>
+            <div class="objectives">
+              <div class="objective-column">
+                <i class="lni lni-laptop-phone"></i>
+                <p>Create quality technology applications for the protection and preservation of the environment</p>
+              </div>
+              <div class="objective-column">
+                <i class="lni lni-trees"></i>
+                <p>Promote the culture of eco-friendly lifestyles through the use of Forden Co’s technologies</p>
+              </div>
+              <div class="objective-column">
+                <i class="lni lni-money-location"></i>
+                <p>Provide balanced economic opportunities and benefits between the company and its stakeholders </p>
+              </div>
+              <div class="objective-column">
+                <i class="lni lni-handshake"></i>
+                <p>Unite people under the same cause of protecting and preserving the environment for the upcoming generations</p>
+              </div>
+            </div>
+          </div>
+          <img src="https://i.imgur.com/dr0zEWL.png" alt="Forden Co. Logo" class="big-logo" />
+        </div>
+      </section>
+      <section class="backgroundpage">
+        <div class="background-bg" id="background-bg">
+          <h2>How we were inspired to do what we do</h2>
+          <div class="background-container">
+            <div class="card">
+              <div class="card-header">
+                <h3>The Community</h3>
+              </div>
+              <img class="card-thumbnail" src="https://images.unsplash.com/photo-1583653418811-41f5b4e8db75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+              <div class="card-content">
+                <p>Barangay Lanatan is part of the Local Government Unit of Balayan in the Province of Batangas and is found and situated at CALABARZON, Region IV-A. Barangay Lanatan is one of the barangays in Balayan, with a population of 2,538 as of the 2020 census. Balayan is politically subdivided into forty-eight barangays and is located at the central area of the western portion of Batangas, covering an area of 41.98 square miles.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3>The Problem</h3>
+              </div>
+              <img class="card-thumbnail" src="https://gratisography.com/wp-content/uploads/2021/09/gratisography-dumpster-fire-free-stock-photo-1170x780.jpg" alt="Burning of Trash" />
+              <div class="card-content">
+                <p>Balayan is a serious concern because the municipality has paid insufficient attention to proper solid waste management. At present, the municipality has no working collection system of wastes. Waste collectors are not visible in the municipality. Thus, individual houses tend to dispose of solid waste just everywhere. This eventually led people to resort to an even bigger problem, trash burning. The toxic chemicals released during burning include nitrogen oxides, sulfur dioxide, volatile organic chemicals, and polycyclic organic matter. </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3>The Causes</h3>
+              </div>
+              <img class="card-thumbnail" src="https://gratisography.com/wp-content/uploads/2020/09/gratisography-trash-eyes-1-free-stock-photo-1170x780.jpg" alt="" />
+              <div class="card-content">
+                <p>Since trash collection services were limited in the municipality of Balayan, the local government had focused waste management efforts in the town proper or within the confines of the “kabayanan” of Balayan. Consequently, garbage trucks were no longer servicing the residents of other barangays, one of which is Barangay Lanatan. Although it was agreed upon by the local leaders (both government and non-government) that the garbage collection service would be suspended in the barangay, a new problem related to waste management emerged: <u>trash burning</u>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="trashbuddypage" id="trashbuddy">
+        <div class="trashbuddy-bg">
+          <div class="trashbuddy-content">
+            <h2>Our solution to the problem; introducing our application:</h2>
+            <img class="trashbuddy-logo" src="https://i.imgur.com/HR1D7py.png" alt="TrashBuddy, your virtual waste management assistant" />
+            <h4>"TrashBuddy is a mobile application that essentially introduces users 
+              to sustainable waste disposal options to prevent them from burning trash. After fulfilling 
+              the necessary user inputs, the application provides several suggestions for managing the 
+              household’s trash with both the users’ and the environment's benefit in mind. Through combining informative and interactive features, complemented by compelling visuals, the application provides 
+              both practicality and interest in striving for proper waste management in the community.
+              "
+            </h4>
+          </div>
+        </div>
+      </section>
+      <section class="featurespage">
+        <div class="features-bg">
+          <h2>What TrashBuddy can do for you</h2>
+          <div class="features-container">
+            <div class="feature-text feature1">
+              <h3>Feature 1</h3>
+              <p>description</p>
+            </div>
+            <img class="feature-image" src="https://i.imgur.com/U6i9rzP.png" alt="" />
+            <img class="feature-image" src="https://i.imgur.com/U6i9rzP.png" alt="" />
+            <div class="feature-text feature2">
+              <h3>Feature 2</h3>
+              <p>description</p>
+            </div>
+            <div class="feature-text feature3">
+              <h3>Feature 3</h3>
+              <p>description</p>
+            </div>
+            <img class="feature-image" src="https://i.imgur.com/U6i9rzP.png" alt="" />
+          </div>
+        </div>
+        <div class="trashbuddy-video-bg">
+          <h2>Watch how it works!</h2>
+          <div class="trashbuddy-video">
+            <div class="iframe-container">
+              <iframe width="1280" height="720" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="businesspage">
+        <div class="bmc-bg">
+          <div class="bmc-content">
+            <h2>Check out our comprehensive Business Model Canvas about the project:</h2>
+            <span>       <a href="https://drive.google.com/file/d/1LEt4SzYvq-5_NqhJUWxX62LQ1jXYK2sV/view" target="_blank">
+            <img class="bmc-pic" src="https://i.imgur.com/LvEmAxp.png" alt="business model canvas for trashbuddy">
+            </a>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section class="smartpage">
+        <div class="smart-bg">
+          <h2>TrashBuddy addresses all five SMART goals</h2>
+          <div class="smart-container">
+            <select id="smart">
+              <option value="sustainable">Sustainable</option>
+              <option value="measurable">Measurable</option>
+              <option value="attainable">Attainable</option>
+              <option value="relevant">Relevant</option>
+              <option value="trailblazing">Trailblazing</option>
+            </select>
+            <div class="smart-content-container">
+              <div id="sustainable" class="smart-content">
+                <i class="lni lni-bulb"></i>
+                <h4>TrashBuddy addresses all the three Pillars of Sustainability. The project complies with environmental sustainability by promoting sustainability by using technology and digital resources, with little to no physical resources and imbibing the culture of being environmentally responsible by being aware of the sustainable waste disposal options available to them. With economical sustainability, the application only requires a reasonably low budget due to the use of a free app building software (Glide) with revenue streams identified as: (1) 5% cut on junk shop selling, (2) advertising sponsorships. For social sustainability, TrashBuddy aims to create a healthier and more sustainable community for the people and the environment in Barangay Lanatan and promote social partnership and participation through the junk shop selling.</h4>
+              </div>
+              <div id="measurable" class="smart-content">
+                <i class="lni lni-ruler-pencil"></i>
+                <h4>TrashBuddy's objectives are measurable because of the data input in the application, and the research tools and instruments that the group will use. For the data input, TrashBuddy allows users to input their trash into the application, which will be the basis for the sustainable disposal recommendations. It monitors waste generation through graphs and statistics, which makes it easier for users to become aware of their own trash production. Moreover, the quiz mini-feature allows the TrashBuddy to assess the level of knowledge gained by the residents through the use of the application. Furthermore, the research tools and instruments that will be used to measure the variables present in this project will be online questionnaires and surveys, which will be able to gather the quantitative data and qualitative data respectively. All of which will be used towards assessing whether the objectives are met.</h4>
+              </div>
+              <div id="attainable" class="smart-content">
+                <i class="lni lni-handshake"></i>
+                <h4>TrashBuddy is attainable, and is possible to develop due to the advancements in technology. Currently, Forden Co. was able to create a prototype using GLIDE, which is a free crude application builder that utilizes Google Sheets. Moreover, the lessons in the Work Immersion/Research 1 (WiCAPS), also provide a foundational knowledge on how to utilize GLIDE, and develop an application. Furthermore, since most of the residents in Barangay Lanatan are tech-savvy, based on their active participation in the online surveys done for needs
+                  assessment, it can be assumed that this target community will be able to put TrashBuddyinto good use. Finally, the partnership with a local junk shop is possible because of thetwo existing junk shops in the area near Barangay Lanatan. Since the partnership offers advantages for the junk shops, it will serve as their motivation to become part of the TrashBuddy project.
+                </h4>
+              </div>
+              <div id="relevant" class="smart-content">
+                <i class="lni lni-leaf"></i>
+                <h4>With the identified issue in the community being the burning of trash due to limited waste disposal options, Forden Co. decided to tackle the problem through a different approach. TrashBuddy is an app that views the problem from a wider perspective. Because reinforcing or implementing policies for the community is unlikely to be effective, the group focused on enhancing each household’s waste management instead. With that said, the project aims to address the issue by encouraging the community to practice sustainable waste management and disposal based on a household’s waste production. The app’s focal point on addressing the problem lies within the personalized recommendations. With reuse, recycle and compost recommendations,  each aforementioned tip will provide households with new mediums for disposal, thus Forden Co.’s proposed project will certainly address the focused problem and provide a positive impact on Barangay Lanatan’s environment.</h4>
+              </div>
+              <div id="trailblazing" class="smart-content">
+                <i class="lni lni-stamp"></i>
+                <h4>TrashBuddy itself is innovative for it is an application that provides its users a personalized waste manager that gives fun learning experiences regarding the environment. With that said, the application was given unique features to introduce sustainable waste disposal methods to its users to prevent them from burning their trash. These include how the application collects data on a user’s household trash production, then it uses this to give personalized recommendations on what the user can do to their accumulated trash. Furthermore, other waste management applications also revolve around the concept of scheduling trash collection, and not much on how to properly dispose of their trash. This is where TrashBuddy deviates from the usual format of waste management applications. Through a combination of personalized tips and features that are designed specifically for communities without proper waste management systems, TrashBuddy is able to solve the problem in a new and innovative way.</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sdg-goals">
+        <div class="sdg-bg">
+          <h2>TrashBuddy also contributes to the following Sustainable Development Goals</h2>
+          <div class="sdg-content">
+            <a class="A" href="https://sdgs.un.org/goals/goal3" target="_blank">
+              <div class="sdg-card sdg-card1">
+                <h3>SDG #3</h3>
+                <h4>Good Health and Well-Being</h4>
+                <i class="lni lni-heart"></i>
+                <h5>Diminishes the potential smoke coming from trash burning that  can lead to various respiratory illnesses</h5>
+              </div>
+            </a>
+            <a class="B" href="https://sdgs.un.org/goals/goal11" target="_blank">
+              <div class="sdg-card sdg-card2">
+                <h3>SDG #11</h3>
+                <h4>Sustainable Cities and Communities</h4>
+                <i class="lni lni-home"></i>
+                <h5>Nurtures sustainable waste management practices like Reuse, Reduce, and Recycle</h5>
+              </div>
+            </a>
+            <a class="C" href="https://sdgs.un.org/goals/goa12" target="_blank">
+              <div class="sdg-card sdg-card3">
+                <h3>SDG #12</h3>
+                <h4>Responsible Consumption  and Production</h4>
+                <i class="lni lni-trash-can"></i>
+                <h5>Increases each household’s awareness on the waste they  produce through the goods they consume</h5>
+              </div>
+            </a>
+            <a class="D" href="https://sdgs.un.org/goals/goal13" target="_blank">
+              <div class="sdg-card sdg-card4">
+                <h3>SDG #13</h3>
+                <h4>Climate Action</h4>
+                <i class="lni lni-cloud"></i>
+                <h5>Promotes healthy waste disposal that help avoid air pollution in trash burning and land  pollution from landfilling</h5>
+              </div>
+            </a>
+            <a class="E" href="https://sdgs.un.org/goals/goal15" target="_blank">
+              <div class="sdg-card sdg-card5">
+                <h3>SDG #15</h3>
+                <h4>Life on Land</h4>
+                <i class="lni lni-leaf"></i>
+                <h5>Avoids land  degradation and focusing on composting instead</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="download-page">
+        <div class="download-bg">
+          <div class="download-content">
+            <h2>Start your TrashBuddy Journey now!</h2>
+            <h4>Click below to download the application. Support for more platforms coming in the future!</h4>
+            <a href="#">
+              <h4 class="download-button">Android <i class="lni lni-android-original"></i></h4>
+            </a>
+            <img class="trashbuddy-logo-download" src="https://i.imgur.com/HR1D7py.png" alt="TrashBuddy, your virtual waste management assistant" />
+          </div>
+        </div>
+      </section>
+      <section class="aboutus-page" id="aboutus">
+        <div class="aboutus-bg">
+          <div class="aboutus-content">
+            <h2>Thank you for supporting TrashBuddy</h2>
+            <h3>This project is maintained by C12-03 students of De La Salle Lipa. We are in the early phase so we would be happy to accept feedback from our users.</h3>
+            <h3>Contact us:</h3>
+            <h4>placeholderemail@gmail.com</h4>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <p>All images used are free from copyright as per unsplash.io, gratisography.com, and lineicons.com guidelines.</p>
+        <p>CAPSTONE C12-03</p>
+      </div>
+    </footer>
+  </body>
+  <!-- html ends here -->
+</html>
