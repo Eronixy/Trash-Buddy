@@ -1,10 +1,11 @@
 <!-- This website was built through the collaboration of Capstone C12-03 members. Using syncfiddle.net, Wicreate modules, and online tutorials, we were able to collaborate the making of HTML, CSS, and Javascript  code from scratch. No drag-and-drop website builders were used in the process (syncfiddle.net is a website used only for collaborative HTML making and does not have drag-and-drop website creation features). All images and icons used are free to use and free from copyright (see unsplash.io, gratisography.com, and lineicons.com guidelines) -->
+<!-- NOTE: This website contains responsive view (meaning it changes style depending on device). However, the website was primarily made for desktop viewing so the mobile view is not optimized. So if you think something is off, then you may be on mobile view instead of dekstop view (change screen width if this happens). -->
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
     <title>Forden Co TrashBuddy Application</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Forden Co Trashbuddy" />
+    <meta name="description" content="Forden Co Trashbuddy"/>
     <link rel="icon" href="https://i.imgur.com/0Q4TmWT.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
@@ -295,9 +296,9 @@
       transform: scale(1.05);
       }
       .features-bg {
-      padding: 7rem 3rem 10rem 7rem;
+      padding: 5rem 3rem 5rem 3rem;
       background-image: url(https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-      background-position: right bottom;
+      background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
       display: flex;
@@ -306,10 +307,15 @@
       justify-content: center;
       }
       .features-bg > h2 {
+     	margin-bottom: 3rem;
+     	color: black;
+      font-family: "Montserrat";
       text-align: center;
+      text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
       }
       .features-container {
-      grid-gap: 0.5rem;
+      grid-column-gap: 2rem;
+      grid-row-gap: 5rem;
       display: grid;
       max-width: 1280px;
       grid-template-columns: repeat(2, minmax(200px, 1fr));
@@ -318,9 +324,20 @@
       align-items: center;
       }
       .feature-text {
+      box-shadow: 0rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.6);
+      border-radius: 2rem;
+      color: black;
+      background-color: rgba(237, 230, 214, 1);
+      font-family: "Montserrat";
+      text-align: center;
+      }
+      .feature-text {
+      	border: 0.5rem solid var(--light-gold);
       }
       .feature-image {
-      max-width: 90%;
+      box-shadow: 0rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
+      border-radius: 2rem;
+      max-width: 100%;
       object-fit: cover;
       }
       .trashbuddy-video-bg{
@@ -761,7 +778,6 @@
         <div class="mission-vision" id="company">
           <div class="mission-vision-text">
             <h2 class="name">Technologies for the Environment.</h2>
-            <h4>- Forden Co.</h4>
             <h4 class="paddingtop"><strong>MISSION</strong></h4>
             <p>
               Forden Co. is a company dedicated to designing user-friendly applications for the environment - offering quality technologies and giving utmost importance to accessibility and convenience to our users.
@@ -832,8 +848,8 @@
           <div class="trashbuddy-content">
             <h2>Our solution to the problem; introducing our application:</h2>
             <img class="trashbuddy-logo" src="https://i.imgur.com/HR1D7py.png" alt="TrashBuddy, your virtual waste management assistant" />
-            <h4>"TrashBuddy is a mobile application that essentially introduces users 
-              to sustainable waste disposal options to prevent them from burning trash. After fulfilling 
+            <h4>"TrashBuddy is a multi-platform application that essentially introduces users 
+           		to sustainable waste disposal options to prevent them from burning trash. After fulfilling 
               the necessary user inputs, the application provides several suggestions for managing the 
               household’s trash with both the users’ and the environment's benefit in mind. Through combining informative and interactive features, complemented by compelling visuals, the application provides 
               both practicality and interest in striving for proper waste management in the community.
@@ -847,27 +863,27 @@
           <h2>What TrashBuddy can do for you</h2>
           <div class="features-container">
             <div class="feature-text feature1">
-              <h3>Feature 1</h3>
-              <p>description</p>
+              <h3>Virtual Trash Cans</h3>
+              <h4>description</h4>
             </div>
-            <img class="feature-image" src="https://i.imgur.com/U6i9rzP.png" alt="" />
-            <img class="feature-image" src="https://i.imgur.com/U6i9rzP.png" alt="" />
+            <img class="feature-image" src="https://i.imgur.com/KGiSijj.png" alt="Virtual Trash Can Feature" />
+            <img class="feature-image" src="https://i.imgur.com/hJ9zT7h.png" alt="Sustainable recommendations feature" />
             <div class="feature-text feature2">
-              <h3>Feature 2</h3>
-              <p>description</p>
+              <h3>Personalized Sustainable Recommendations</h3>
+              <h4>description</h4>
             </div>
             <div class="feature-text feature3">
-              <h3>Feature 3</h3>
-              <p>description</p>
+              <h3>Trash-Out</h3>
+              <h4>description</h4>
             </div>
-            <img class="feature-image" src="https://i.imgur.com/U6i9rzP.png" alt="" />
+            <img class="feature-image" src="https://i.imgur.com/EfWord2.png" alt="Trash-out Feature" />
           </div>
         </div>
         <div class="trashbuddy-video-bg">
           <h2>Watch how it works!</h2>
           <div class="trashbuddy-video">
             <div class="iframe-container">
-              <iframe width="1280" height="720" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
+              <iframe width="1280" height="720" src="https://www.youtube.com/embed/nRZ1a-DmvNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -876,7 +892,7 @@
         <div class="bmc-bg">
           <div class="bmc-content">
             <h2>Check out our comprehensive Business Model Canvas about the project:</h2>
-            <span>       <a href="https://drive.google.com/file/d/1LEt4SzYvq-5_NqhJUWxX62LQ1jXYK2sV/view" target="_blank">
+            <span> <a href="https://drive.google.com/file/d/1LEt4SzYvq-5_NqhJUWxX62LQ1jXYK2sV/view" target="_blank">
             <img class="bmc-pic" src="https://i.imgur.com/LvEmAxp.png" alt="business model canvas for trashbuddy">
             </a>
             </span>
@@ -971,10 +987,11 @@
       <section class="download-page">
         <div class="download-bg">
           <div class="download-content">
-            <h2>Start your TrashBuddy Journey now!</h2>
-            <h4>Click below to download the application. Support for more platforms coming in the future!</h4>
-            <a href="#">
-              <h4 class="download-button">Android <i class="lni lni-android-original"></i></h4>
+            <h2>Join us in the TrashBuddy Journey!</h2>
+            <h4>Click down below to head to the application. Be part of the solution.
+            </h4>
+            <a href="https://trashbuddy.glideapp.io" target="blank_">
+              <h4 class="download-button">START NOW <i class="lni lni-trash-can"></i></h4>
             </a>
             <img class="trashbuddy-logo-download" src="https://i.imgur.com/HR1D7py.png" alt="TrashBuddy, your virtual waste management assistant" />
           </div>
@@ -984,9 +1001,9 @@
         <div class="aboutus-bg">
           <div class="aboutus-content">
             <h2>Thank you for supporting TrashBuddy</h2>
-            <h3>This project is maintained by C12-03 students of De La Salle Lipa. We are in the early phase so we would be happy to accept feedback from our users.</h3>
+            <h3>This project is maintained by C12-03 Group 2 students of De La Salle Lipa. We are in the early phase so we would be happy to accept feedback from our users.</h3>
             <h3>Contact us:</h3>
-            <h4>placeholderemail@gmail.com</h4>
+            <h4>technicalsupp.trashbuddy@gmail.com</h4>
           </div>
         </div>
       </section>
@@ -994,7 +1011,7 @@
     <footer>
       <div class="footer">
         <p>All images used are free from copyright as per unsplash.io, gratisography.com, and lineicons.com guidelines.</p>
-        <p>CAPSTONE C12-03</p>
+        <p>CAPSTONE C12-03 Group 2</p>
       </div>
     </footer>
   </body>
