@@ -2,6 +2,7 @@
 <!-- NOTE: This website contains responsive view (meaning it changes style depending on device). However, the website was primarily made for desktop viewing so the mobile view is not optimized. So if you think something is off, then you may be on mobile view instead of dekstop view (change screen width if this happens). -->
 <!DOCTYPE html>
 <html lang="en-US">
+  <!--Head tag here, initializing meta tags, adding styles, importing font, and javascript code to the website-->
   <head>
     <title>Forden Co TrashBuddy Application</title>
     <meta charset="UTF-8" />
@@ -13,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Jquery code here for the drop down selector on SMART page -->
     <script>
       $(document).ready(function(){
         $("#smart").on('change', function(){
@@ -22,7 +24,9 @@
       });
       
     </script>
+    <!-- Style tag here, adding graphic design and overall style/motif of the website -->
     <style>
+      /* Root tag used to initialize the color scheme of the website and making variables for the common colors used throughout the website */
       :root {
       --green : #136207;
       --white : #FFFDFD;
@@ -34,15 +38,18 @@
       --gray : #aaaaaa;
       --dark-gray: #303841;
       }
+      /* Deleting padding and margin of the elements for better sizing and crisp borders */
       *, *::before, *::after {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
       }
+      /* Html tag used to style the whole webpage by its font and font-szie plus adding a smooth scrolling effect for the navigation header */
       html {
       scroll-behavior: smooth;
       font-family: "Roboto", "Helvetica Neue", sans-serif;
       font-size: 62.5%;
+      /* Every tag hereafter is used to style individual elements of the html */
       }
       h1 {
       font-size: 5.5rem;
@@ -307,8 +314,8 @@
       justify-content: center;
       }
       .features-bg > h2 {
-     	margin-bottom: 3rem;
-     	color: black;
+      margin-bottom: 3rem;
+      color: black;
       font-family: "Montserrat";
       text-align: center;
       text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -330,9 +337,15 @@
       background-color: rgba(237, 230, 214, 1);
       font-family: "Montserrat";
       text-align: center;
+      padding: 1rem;
       }
       .feature-text {
-      	border: 0.5rem solid var(--light-gold);
+      border: 0.5rem solid var(--light-gold);
+      }
+      .feature-text h5 {
+      margin-top: 0.5rem;
+      font-size: 2rem;
+      font-family: "Roboto";
       }
       .feature-image {
       box-shadow: 0rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
@@ -643,6 +656,34 @@
       .aboutus-content > h3 {
       padding-top: 3rem;
       }
+      .aboutus-container {
+      margin-top: 3rem;
+      width: 100%;
+      max-width: 1280px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 3rem;
+      }
+      .aboutus-card {
+      background-color: #404040;
+      color: var(--whiteish);
+      text-shadow: 2px 2px 3px black;
+      border: 2px solid var(--light-gold);
+      border-radius: 0.5rem;
+      box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+      }
+      .aboutus-card > h3 {
+      font-size: 2.5rem;
+      }
+      .aboutus-card > h4 {
+      font-size: 1.75rem;
+      }
+      .aboutus-img {
+      object-position: center;
+      height: calc(100% - 12rem);
+      width: 100%;
+      object-fit: cover;
+      }
       .footer {
       display: flex;
       justify-content: space-between;
@@ -653,6 +694,7 @@
       background-color: var(--gray);
       border-top: 3px solid var(--dark-gray);
       }
+      /* Media tags are used for mobile support and responsiveness of the website depending on the size of the device/screen. Causes changes to happen on the layout and font size of the whole website for better mobile view. Not that optimized but looks decent on mobile view. */
       @media (max-width: 1200px) {
       .title {
       display: none;
@@ -699,7 +741,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      }
       }
       @media (max-width: 800px) {
       .title {
@@ -751,6 +792,7 @@
       }
     </style>
   </head>
+  <!-- Head tag over, body tag starts here where the elements of the website are created such as images, navigation, text, links, and all the content needed. Each section tag is a page in the website. -->
   <body>
     <header class="header">
       <div class="title">
@@ -828,7 +870,7 @@
               </div>
               <img class="card-thumbnail" src="https://gratisography.com/wp-content/uploads/2021/09/gratisography-dumpster-fire-free-stock-photo-1170x780.jpg" alt="Burning of Trash" />
               <div class="card-content">
-                <p>Balayan is a serious concern because the municipality has paid insufficient attention to proper solid waste management. At present, the municipality has no working collection system of wastes. Waste collectors are not visible in the municipality. Thus, individual houses tend to dispose of solid waste just everywhere. This eventually led people to resort to an even bigger problem, trash burning. The toxic chemicals released during burning include nitrogen oxides, sulfur dioxide, volatile organic chemicals, and polycyclic organic matter. </p>
+                <p>The fundamental issue that Forden Co. is attempting to address is the lack of waste disposal options. Because of tradition and a lack of garbage collection services, the majority of the households in Brgy. Lanatan resort to landfilling and trash burning. Consequently, this continued practice has generated health and environmental risks to the community due to the improper waste management, especially the toxic chemicals released through burning trash.</p>
               </div>
             </div>
             <div class="card">
@@ -837,7 +879,7 @@
               </div>
               <img class="card-thumbnail" src="https://gratisography.com/wp-content/uploads/2020/09/gratisography-trash-eyes-1-free-stock-photo-1170x780.jpg" alt="" />
               <div class="card-content">
-                <p>Since trash collection services were limited in the municipality of Balayan, the local government had focused waste management efforts in the town proper or within the confines of the “kabayanan” of Balayan. Consequently, garbage trucks were no longer servicing the residents of other barangays, one of which is Barangay Lanatan. Although it was agreed upon by the local leaders (both government and non-government) that the garbage collection service would be suspended in the barangay, a new problem related to waste management emerged: <u>trash burning</u>.</p>
+                <p>As garbage trucks prioritize collecting trash from the main communities in the Municipality of Balayan, smaller areas such as Barangay Lanatan are tasked to eliminate their wastes on their own. As a result, generated wastes can be seen everywhere: from vacant lots to sidewalks. With this, non-biodegradable and residual wastes tend to be burned due to the lack of other disposal methods. Due to insufficient waste collection systems in the community, residents resort to trash burning.</p>
               </div>
             </div>
           </div>
@@ -849,7 +891,7 @@
             <h2>Our solution to the problem; introducing our application:</h2>
             <img class="trashbuddy-logo" src="https://i.imgur.com/HR1D7py.png" alt="TrashBuddy, your virtual waste management assistant" />
             <h4>"TrashBuddy is a multi-platform application that essentially introduces users 
-           		to sustainable waste disposal options to prevent them from burning trash. After fulfilling 
+              to sustainable waste disposal options to prevent them from burning trash. After fulfilling 
               the necessary user inputs, the application provides several suggestions for managing the 
               household’s trash with both the users’ and the environment's benefit in mind. Through combining informative and interactive features, complemented by compelling visuals, the application provides 
               both practicality and interest in striving for proper waste management in the community.
@@ -864,17 +906,17 @@
           <div class="features-container">
             <div class="feature-text feature1">
               <h3>Virtual Trash Cans</h3>
-              <h4>description</h4>
+              <h5>TrashBuddy's first main feature allows users to manage and keep track of their waste generation. With a simple and easy to follow input process, this is a hassle-free task. Correspondingly, there is a waste summary showcasing the users' accumulated data to raise awareness and realize points of concern and improvement for household waste management.</h5>
             </div>
             <img class="feature-image" src="https://i.imgur.com/KGiSijj.png" alt="Virtual Trash Can Feature" />
             <img class="feature-image" src="https://i.imgur.com/hJ9zT7h.png" alt="Sustainable recommendations feature" />
             <div class="feature-text feature2">
               <h3>Personalized Sustainable Recommendations</h3>
-              <h4>description</h4>
+              <h5>In combination with the Virtual Trash Cans, TrashBuddy's second feature showcases an array of alternative waste disposal methods. As the recommendations are categorized into the multiple waste types in the first feature, navigating this tab's contents won't be a problem. Anchored upon the concept of 3R's and composting, this feature allows users to learn more interesting and environment-friendly ways to manage their trash.</h5>
             </div>
             <div class="feature-text feature3">
-              <h3>Trash-Out</h3>
-              <h4>description</h4>
+              <h3>Trash Out!</h3>
+              <h5>This third feature promotes a wildly underrated disposal method, junkshop selling. With the help of partner local junkshops in Balayan, TrashBuddy will make it easier for junkshops and households to interact. Balancing both environmental and economic sustainability, Trash Out! aims to provide a win-win scenario for the users and the junkshop owners.</h5>
             </div>
             <img class="feature-image" src="https://i.imgur.com/EfWord2.png" alt="Trash-out Feature" />
           </div>
@@ -1000,7 +1042,89 @@
       <section class="aboutus-page" id="aboutus">
         <div class="aboutus-bg">
           <div class="aboutus-content">
-            <h2>Thank you for supporting TrashBuddy</h2>
+            <h2>Meet the team behind the project:</h2>
+            <div class="aboutus-container">
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/V93nIeQ.jpg" class="aboutus-img" alt="Josh Aldrich de Villa"/>
+                <h3>Josh Aldrich De Villa</h3>
+                <h4>Chief Executive Officer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/YmxQ7uT.jpg" class="aboutus-img" alt="Christian David Corto"/>
+                <h3>Christian David Corto</h3>
+                <h4>Chief Technology Officer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/VTZ11pX.jpg" class="aboutus-img" alt="Micaela Santoceldes"/>
+                <h3>Micaela Santoceldes</h3>
+                <h4>Business Management Head</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/DUrLjnB.jpg" class="aboutus-img" alt="Maria Christine Dizon"/>
+                <h3>Maria Christine Dizon</h3>
+                <h4>Business Operations Manager</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/2xH7Uwo.jpg" class="aboutus-img" alt="Julianna Mae Marqueses"/>
+                <h3>Julianna Mae Marqueses</h3>
+                <h4>Business Management Officer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/GFRKgJR.jpg" class="aboutus-img" alt="Irron Jovic Jun Brosoto"/>
+                <h3>Irron Jovic Jun Brosoto</h3>
+                <h4>Promotions and Website Head Developer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/CBlloLI.jpg" class="aboutus-img" alt="Hannah Patricia Galac"/>
+                <h3>Hannah Patricia Galac</h3>
+                <h4>Promotions and Website Manager</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/3MR3Gpg.jpg" class="aboutus-img" alt="Julia Kaye Aranza"/>
+                <h3>Julia Kaye Aranza</h3>
+                <h4>Promotions Officer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/Z2shlW9.jpg" class="aboutus-img" alt="Precious Entienza"/>
+                <h3>Precious Entienza</h3>
+                <h4>Design Editor</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/UxdECyT.jpg" class="aboutus-img" alt="Dwayne Aldrich Biscocho"/>
+                <h3>Dwayne Aldrich Biscocho</h3>
+                <h4>Research and Development Head</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/73Kza4l.jpg" class="aboutus-img" alt="Jenelle Erika Mendoza"/>
+                <h3>Jenelle Erika Mendoza</h3>
+                <h4>Research and Development Officer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/sI3L0Sq.jpg" class="aboutus-img" alt="Erica Louisse Malabanan"/>
+                <h3>Erica Louisse Malabanan</h3>
+                <h4>Research and Development Officer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/6FyXvGa.jpg" class="aboutus-img" alt="Mac Kevin Mantupar"/>
+                <h3>Mac Kevin Mantupar</h3>
+                <h4>Technology Application Head Developer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/xOQLRjb.jpg" class="aboutus-img" alt="Marcus Luis Varias"/>
+                <h3>Marcus Luis Varias</h3>
+                <h4>Technology Application Designer and Developer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/62EbyEI.jpg" class="aboutus-img" alt="Gem Ann Gwyneth Villanueva"/>
+                <h3>Gem Ann Gwyneth Villanueva</h3>
+                <h4>Technology Application Designer and Developer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/zm8pA6V.png" class="aboutus-img" alt="Mark Daniel Manalo"/>
+                <h3>Mark Daniel Manalo</h3>
+                <h4>Technology Application Developer</h4>
+              </div>
+            </div>
             <h3>This project is maintained by C12-03 Group 2 students of De La Salle Lipa. We are in the early phase so we would be happy to accept feedback from our users.</h3>
             <h3>Contact us:</h3>
             <h4>technicalsupp.trashbuddy@gmail.com</h4>
@@ -1015,5 +1139,5 @@
       </div>
     </footer>
   </body>
-  <!-- html ends here -->
+  <!-- HTML ends here -->
 </html>
