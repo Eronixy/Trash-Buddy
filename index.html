@@ -66,6 +66,9 @@
       h5 {
       font-size: 2.2rem;
       }
+      ul {
+      	font-size: 2rem;
+      }
       p {
       font-size: 1.75rem;
       }
@@ -260,8 +263,13 @@
       width: 100%;
       object-fit: cover;
       }
-      .card-content {
+      .card-content ul{
       padding: 2rem;
+      margin-left: 0.5rem;
+      }
+      .card-content li {
+      font-size: 2rem;
+      padding-bottom: 1rem;
       }
       .trashbuddy-bg {
       display: flex;
@@ -321,6 +329,17 @@
       text-align: center;
       text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
       }
+      .trashbuddy-video2 {
+      	border-radius 2rem;
+      }
+      .trashbuddy-video2 {
+      box-shadow: 0rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.6);
+      border: 0.5rem solid var(--light-gold);
+      margin-bottom: 5rem;
+      position: relative;
+      height: 60%;
+      width: 60%;
+      }
       .features-container {
       grid-column-gap: 2rem;
       grid-row-gap: 5rem;
@@ -347,6 +366,22 @@
       margin-top: 0.5rem;
       font-size: 2rem;
       font-family: "Roboto";
+      }
+      .feature-text ul {
+      	list-style: none;
+      	text-align: left;
+      	margin-top: 2rem;
+        padding: 0px 3rem 0px 3rem;
+      }
+      .feature-text li::before {
+      	content: "\00BB";
+      }
+      .feature-text ul > li {
+      	padding-bottom: 1rem;
+      	font-weight: 600;
+      	font-family: "Montserrat";
+      	font-size: 2.5rem;
+      	text-shadow: 1px 1px 0px white;
       }
       .feature-image {
       box-shadow: 0rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
@@ -415,7 +450,7 @@
       border: 1rem solid var(--gold);
       border-radius: 1rem;
       margin-top: 5rem;
-      width: 40%;
+      width: 60vw;
       height: auto;
       transition: transform 150ms ease-in;
       }
@@ -472,8 +507,11 @@
       }
       .smart-content {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: black;
-      font-weight: 100;
       text-shadow: 1px 1px 0px white;
       border-radius: 10px;
       border: 6px solid var(--light-green);
@@ -481,6 +519,18 @@
       padding: 2rem 5rem;
       box-shadow: 7px 3px 5px rgba(0, 0, 0, 0.5);
       box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.5);
+      }
+      .smart-content ul {
+      	text-align: left;
+      	padding-top: 1rem;
+        padding: 0px 7rem 0px 7rem;
+      }
+      .smart-content ul > li, .smart-content h4 {
+      	padding-bottom: 1rem;
+      	font-weight: 600;
+      	font-family: "Montserrat";
+      	font-size: 2.5rem;
+      	text-shadow: 1px 1px 0px white;
       }
       .smart-content i {
       font-size: 50px;
@@ -662,6 +712,22 @@
       width: 100%;
       max-width: 1280px;
       display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3rem;
+      }
+      .aboutus-containertech {
+      margin-top: 3rem;
+      width: 100%;
+      max-width: 1280px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 3rem;
+      }
+      .aboutus-containermarket {
+      margin-top: 3rem;
+      width: 100%;
+      max-width: 1280px;
+      display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 3rem;
       }
@@ -679,9 +745,16 @@
       .aboutus-card > h4 {
       font-size: 1.75rem;
       }
+      .aboutus-card > p {
+      	font-size: 1.5rem;
+        padding: 0.5rem;
+      }
+      .headimg {
+      	grid-column: 2 / 3;
+      }
       .aboutus-img {
       object-position: center;
-      height: calc(100% - 12rem);
+      height: 30rem;
       width: 100%;
       object-fit: cover;
       }
@@ -876,7 +949,11 @@
               </div>
               <img class="card-thumbnail" src="https://images.unsplash.com/photo-1583653418811-41f5b4e8db75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
               <div class="card-content">
-                <p>Barangay Lanatan is part of the Local Government Unit of Balayan in the Province of Batangas and is found and situated at CALABARZON, Region IV-A. Barangay Lanatan is one of the barangays in Balayan, with a population of 2,538 as of the 2020 census. Balayan is politically subdivided into forty-eight barangays and is located at the central area of the western portion of Batangas, covering an area of 41.98 square miles.</p>
+                <ul>
+                  <li>Barangay Lanatan, Balayan, Batangas</li>
+                  <li>Population: 2,538 (as of 2020)</li>
+                  <li>Area: 41.98 sq. mi.</li>
+                </ul>
               </div>
             </div>
             <div class="card">
@@ -885,7 +962,13 @@
               </div>
               <img class="card-thumbnail" src="https://gratisography.com/wp-content/uploads/2021/09/gratisography-dumpster-fire-free-stock-photo-1170x780.jpg" alt="Burning of Trash" />
               <div class="card-content">
-                <p>The fundamental issue that Forden Co. is attempting to address is the lack of waste disposal options. Because of tradition and a lack of garbage collection services, the majority of the households in Brgy. Lanatan resort to landfilling and trash burning. Consequently, this continued practice has generated health and environmental risks to the community due to the improper waste management, especially the toxic chemicals released through burning trash.</p>
+                <ul>
+                  <li>Lack of Waste Disposal Options</li>
+                  <li>Absence of Garbage Collection Services</li>
+                  <li>Growth of Health-Threatening Activities such as Combustion</li>
+                  <li>Landfilling in Public and Private Areas</li>
+                  <li>Worsening Environmental Negligence</li>
+                </ul>  
               </div>
             </div>
             <div class="card">
@@ -894,7 +977,11 @@
               </div>
               <img class="card-thumbnail" src="https://gratisography.com/wp-content/uploads/2020/09/gratisography-trash-eyes-1-free-stock-photo-1170x780.jpg" alt="" />
               <div class="card-content">
-                <p>As garbage trucks prioritize collecting trash from the main communities in the Municipality of Balayan, smaller areas such as Barangay Lanatan are tasked to eliminate their wastes on their own. As a result, generated wastes can be seen everywhere: from vacant lots to sidewalks. With this, non-biodegradable and residual wastes tend to be burned due to the lack of other disposal methods. Due to insufficient waste collection systems in the community, residents resort to trash burning.</p>
+                <ul>
+                  <li>Deprivation of Concrete Schedule of Waste Collection</li>
+                  <li>Sustainable Waste Disposal Illiteracy</li>
+                  <li>Adaptation of Combustion as a Form of Trash Elimination</li>
+                </ul>  
               </div>
             </div>
           </div>
@@ -918,20 +1005,37 @@
       <section class="featurespage">
         <div class="features-bg">
           <h2>What TrashBuddy can do for you</h2>
+          <div class="trashbuddy-video2">
+            <div class="iframe-container">
+              <iframe width="1280" height="720" src="https://www.youtube.com/embed/-WW0rDLnIlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="features-container">
             <div class="feature-text feature1">
               <h3>Virtual Trash Cans</h3>
-              <h5>TrashBuddy's first main feature allows users to manage and keep track of their waste generation. With a simple and easy to follow input process, this is a hassle-free task. Correspondingly, there is a waste summary showcasing the users' accumulated data to raise awareness and realize points of concern and improvement for household waste management.</h5>
+              <ul>
+                <li>Manage and Keep Track of Waste Generation</li>
+                <li>Hassle-free Task</li>
+                <li>Generates Waste Summary to Raise Awareness</li>
+              </ul>
             </div>
             <img class="feature-image" src="https://i.imgur.com/KGiSijj.png" alt="Virtual Trash Can Feature" />
             <img class="feature-image" src="https://i.imgur.com/hJ9zT7h.png" alt="Sustainable recommendations feature" />
             <div class="feature-text feature2">
               <h3>Personalized Sustainable Recommendations</h3>
-              <h5>In combination with the Virtual Trash Cans, TrashBuddy's second feature showcases an array of alternative waste disposal methods. As the recommendations are categorized into the multiple waste types in the first feature, navigating this tab's contents won't be a problem. Anchored upon the concept of 3R's and composting, this feature allows users to learn more interesting and environment-friendly ways to manage their trash.</h5>
+              <ul>
+                <li>Showcases Alternative Waste Disposal Methods</li>
+                <li>Uses the Concept of 3Rs and Composting</li>
+                <li>Users Learn Ways to Manage their Trash</li>
+              </ul>
             </div>
             <div class="feature-text feature3">
               <h3>Trash Out!</h3>
-              <h5>This third feature promotes a wildly underrated disposal method, junkshop selling. With the help of partner local junkshops in Balayan, TrashBuddy will make it easier for junkshops and households to interact. Balancing both environmental and economic sustainability, Trash Out! aims to provide a win-win scenario for the users and the junkshop owners.</h5>
+             	<ul>
+                <li>Promotes Junk Shop Selling</li>
+                <li>Make Communication between Local Junk Shops and Households Easier</li>
+                <li>Balancing Environmental and Economic Sustainability</li>
+              </ul>
             </div>
             <img class="feature-image" src="https://i.imgur.com/EfWord2.png" alt="Trash-out Feature" />
           </div>
@@ -945,56 +1049,7 @@
           </div>
         </div>
       </section>
-      <section class="businesspage">
-        <div class="bmc-bg">
-          <div class="bmc-content">
-            <h2>Check out our comprehensive Business Model Canvas about the project:</h2>
-            <span> <a href="https://drive.google.com/file/d/1LEt4SzYvq-5_NqhJUWxX62LQ1jXYK2sV/view" target="_blank">
-            <img class="bmc-pic" src="https://i.imgur.com/LvEmAxp.png" alt="business model canvas for trashbuddy">
-            </a>
-            </span>
-          </div>
-        </div>
-      </section>
-      <section class="smartpage">
-        <div class="smart-bg">
-          <h2>TrashBuddy addresses all five SMART goals</h2>
-          <div class="smart-container">
-            <select id="smart">
-              <option value="sustainable">Sustainable</option>
-              <option value="measurable">Measurable</option>
-              <option value="attainable">Attainable</option>
-              <option value="relevant">Relevant</option>
-              <option value="trailblazing">Trailblazing</option>
-            </select>
-            <div class="smart-content-container">
-              <div id="sustainable" class="smart-content">
-                <i class="lni lni-bulb"></i>
-                <h4>TrashBuddy addresses all the three Pillars of Sustainability. The project complies with environmental sustainability by promoting sustainability by using technology and digital resources, with little to no physical resources and imbibing the culture of being environmentally responsible by being aware of the sustainable waste disposal options available to them. With economical sustainability, the application only requires a reasonably low budget due to the use of a free app building software (Glide) with revenue streams identified as: (1) 5% cut on junk shop selling, (2) advertising sponsorships. For social sustainability, TrashBuddy aims to create a healthier and more sustainable community for the people and the environment in Barangay Lanatan and promote social partnership and participation through the junk shop selling.</h4>
-              </div>
-              <div id="measurable" class="smart-content">
-                <i class="lni lni-ruler-pencil"></i>
-                <h4>TrashBuddy's objectives are measurable because of the data input in the application, and the research tools and instruments that the group will use. For the data input, TrashBuddy allows users to input their trash into the application, which will be the basis for the sustainable disposal recommendations. It monitors waste generation through graphs and statistics, which makes it easier for users to become aware of their own trash production. Moreover, the quiz mini-feature allows the TrashBuddy to assess the level of knowledge gained by the residents through the use of the application. Furthermore, the research tools and instruments that will be used to measure the variables present in this project will be online questionnaires and surveys, which will be able to gather the quantitative data and qualitative data respectively. All of which will be used towards assessing whether the objectives are met.</h4>
-              </div>
-              <div id="attainable" class="smart-content">
-                <i class="lni lni-handshake"></i>
-                <h4>TrashBuddy is attainable, and is possible to develop due to the advancements in technology. Currently, Forden Co. was able to create a prototype using GLIDE, which is a free crude application builder that utilizes Google Sheets. Moreover, the lessons in the Work Immersion/Research 1 (WiCAPS), also provide a foundational knowledge on how to utilize GLIDE, and develop an application. Furthermore, since most of the residents in Barangay Lanatan are tech-savvy, based on their active participation in the online surveys done for needs
-                  assessment, it can be assumed that this target community will be able to put TrashBuddyinto good use. Finally, the partnership with a local junk shop is possible because of thetwo existing junk shops in the area near Barangay Lanatan. Since the partnership offers advantages for the junk shops, it will serve as their motivation to become part of the TrashBuddy project.
-                </h4>
-              </div>
-              <div id="relevant" class="smart-content">
-                <i class="lni lni-leaf"></i>
-                <h4>With the identified issue in the community being the burning of trash due to limited waste disposal options, Forden Co. decided to tackle the problem through a different approach. TrashBuddy is an app that views the problem from a wider perspective. Because reinforcing or implementing policies for the community is unlikely to be effective, the group focused on enhancing each household’s waste management instead. With that said, the project aims to address the issue by encouraging the community to practice sustainable waste management and disposal based on a household’s waste production. The app’s focal point on addressing the problem lies within the personalized recommendations. With reuse, recycle and compost recommendations,  each aforementioned tip will provide households with new mediums for disposal, thus Forden Co.’s proposed project will certainly address the focused problem and provide a positive impact on Barangay Lanatan’s environment.</h4>
-              </div>
-              <div id="trailblazing" class="smart-content">
-                <i class="lni lni-stamp"></i>
-                <h4>TrashBuddy itself is innovative for it is an application that provides its users a personalized waste manager that gives fun learning experiences regarding the environment. With that said, the application was given unique features to introduce sustainable waste disposal methods to its users to prevent them from burning their trash. These include how the application collects data on a user’s household trash production, then it uses this to give personalized recommendations on what the user can do to their accumulated trash. Furthermore, other waste management applications also revolve around the concept of scheduling trash collection, and not much on how to properly dispose of their trash. This is where TrashBuddy deviates from the usual format of waste management applications. Through a combination of personalized tips and features that are designed specifically for communities without proper waste management systems, TrashBuddy is able to solve the problem in a new and innovative way.</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="sdg-goals">
+            <section class="sdg-goals">
         <div class="sdg-bg">
           <h2>TrashBuddy also contributes to the following Sustainable Development Goals</h2>
           <div class="sdg-content">
@@ -1041,6 +1096,81 @@
           </div>
         </div>
       </section>
+      <section class="businesspage">
+        <div class="bmc-bg">
+          <div class="bmc-content">
+            <h2>Check out our comprehensive Business Model Canvas about the project:</h2>
+            <img class="bmc-pic" src="https://i.imgur.com/8tU51pX.png" alt="business model canvas for trashbuddy">
+          </div>
+        </div>
+      </section>
+      <section class="smartpage">
+        <div class="smart-bg">
+          <h2>TrashBuddy addresses all five SMART goals</h2>
+          <div class="smart-container">
+            <select id="smart">
+              <option value="sustainable">Sustainable</option>
+              <option value="measurable">Measurable</option>
+              <option value="attainable">Attainable</option>
+              <option value="relevant">Relevant</option>
+              <option value="trailblazing">Trailblazing</option>
+            </select>
+            <div class="smart-content-container">
+              <div id="sustainable" class="smart-content">
+                <i class="lni lni-bulb"></i>
+                <h4>Addresses the 3 (three) Pillars of Sustainability: Environmental, Economical, and Social.</h4>
+                <ul>
+                  <li><u>Environmental</u>: Becoming Aware of Sustainable Waste Disposal Options</li>
+                  <li><u>Economical</u>: Requires Low Budget; Php 500.00 Capital for the Collector, Revenue Streams - Php 5.00 Request/Pickup Fee, Advertising Sponsorships</li>
+                  <li><u>Social</u>: Promote Social Partnership and Participation</li>
+                </ul>
+              </div>
+              <div id="measurable" class="smart-content">
+                <i class="lni lni-ruler-pencil"></i>
+                <h4>Measurable Objectives; through In-App Data Input and Research Tools and Instruments to be Used</h4>
+                <ul>
+                  <li><u>In-App Data Input</u>: Basis for the Sustainable Disposal Recommendations and Monitors Waste Generation through Graphs and Statistics</li>
+                  <li><u>Quiz (Mini-Feature)</u>: Assesses the Residents’ Level of Knowledge Gained</li>
+                  <li><u>Research Tools and Instruments</u>: Online Survey and Questionnaires: Gathers Quantitative and Qualitative Data to Assess if the Objectives are Met</li>
+                </ul>
+              </div>
+              <div id="attainable" class="smart-content">
+                <i class="lni lni-handshake"></i>
+                <ul>
+                  <li>Utilization of Free and Easy Block App Builder</li>
+                  <li>Application of Lessons Learned from Work Immersion and Research</li>
+                  <li>Tech-Savviness of the Residents of Target Community</li>
+                  <li>Partnership with Local Junk Shops</li>
+                </ul>
+                <h4>Consequently, the project is attainable because of our group’s camaraderie and teamwork along with how we apply the lessons integrated into DLSL’s curriculum such as the concept of sustainability. 
+                </h4>
+              </div>
+              <div id="relevant" class="smart-content">
+                <i class="lni lni-leaf"></i>
+                <ul>
+                  <li>Addresses the Problem of the Target Community</li>
+                  <li>Enhancing Instead of Making Policies Against Waste Generation</li>
+                  <li>Encourages the Community to Practice Sustainable Waste Management and Disposal</li>
+                  <li>Reinforces the 3Rs and Compost to Lessen the Citizen’s Waste Generation</li>
+                </ul>
+              </div>
+              <div id="trailblazing" class="smart-content">
+                <i class="lni lni-stamp"></i>
+                <ul>
+                  <li>Provides Personalized Waste Manager</li>
+                  <li>Informs Users about the Environment through Fun Activities</li>
+                  <li>Introduces Sustainable Waste Disposal Method</li>
+                  <li>Summarizes Data Inputs about Trash Generation </li>
+                  <li>Users may opt to Schedule Trash Collection</li>
+                  <li>Combination of Personalized Tips and Designed Features Specifically made for Users</li>
+                </ul>
+                <h4>Lastly, the application is trailblazing as we are aiming to innovate and modernize waste management. In a nutshell, Trashbuddy’s underlying magic lies in the endless possibilities and opportunities in our idea, as it can even be pitched to the government for better local waste management.
+</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="download-page">
         <div class="download-bg">
           <div class="download-content">
@@ -1058,66 +1188,22 @@
         <div class="aboutus-bg">
           <div class="aboutus-content">
             <h2>Meet the team behind the project:</h2>
+            <h4>Check out what they have to say!</h4>
             <div class="aboutus-container">
-              <div class="aboutus-card">
+              <div class="aboutus-card headimg">
                 <img src="https://i.imgur.com/V93nIeQ.jpg" class="aboutus-img" alt="Josh Aldrich de Villa"/>
                 <h3>Josh Aldrich De Villa</h3>
                 <h4>Chief Executive Officer</h4>
+                <p>"Through our activities in CAPSTONE, I was able to hone my skills in organization and management. As the leader of the group, keeping track of everything at the same time is a huge responsibility, but it is rewarding to see the fruits of our labors."</p>
               </div>
+            </div>
+            <h3>Technology Department</h3>
+            <div class="aboutus-containertech">
               <div class="aboutus-card">
                 <img src="https://i.imgur.com/YmxQ7uT.jpg" class="aboutus-img" alt="Christian David Corto"/>
                 <h3>Christian David Corto</h3>
                 <h4>Chief Technology Officer</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/VTZ11pX.jpg" class="aboutus-img" alt="Micaela Santoceldes"/>
-                <h3>Micaela Santoceldes</h3>
-                <h4>Business Management Head</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/DUrLjnB.jpg" class="aboutus-img" alt="Maria Christine Dizon"/>
-                <h3>Maria Christine Dizon</h3>
-                <h4>Business Operations Manager</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/2xH7Uwo.jpg" class="aboutus-img" alt="Julianna Mae Marqueses"/>
-                <h3>Julianna Mae Marqueses</h3>
-                <h4>Business Management Officer</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/GFRKgJR.jpg" class="aboutus-img" alt="Irron Jovic Jun Brosoto"/>
-                <h3>Irron Jovic Jun Brosoto</h3>
-                <h4>Promotions and Website Head Developer</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/CBlloLI.jpg" class="aboutus-img" alt="Hannah Patricia Galac"/>
-                <h3>Hannah Patricia Galac</h3>
-                <h4>Promotions and Website Manager</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/3MR3Gpg.jpg" class="aboutus-img" alt="Julia Kaye Aranza"/>
-                <h3>Julia Kaye Aranza</h3>
-                <h4>Promotions Officer</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/Z2shlW9.jpg" class="aboutus-img" alt="Precious Entienza"/>
-                <h3>Precious Entienza</h3>
-                <h4>Design Editor</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/UxdECyT.jpg" class="aboutus-img" alt="Dwayne Aldritz Biscocho"/>
-                <h3>Dwayne Aldritz Biscocho</h3>
-                <h4>Research and Development Head</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/73Kza4l.jpg" class="aboutus-img" alt="Jenelle Erika Mendoza"/>
-                <h3>Jenelle Erika Mendoza</h3>
-                <h4>Research and Development Officer</h4>
-              </div>
-              <div class="aboutus-card">
-                <img src="https://i.imgur.com/sI3L0Sq.jpg" class="aboutus-img" alt="Erica Louisse Malabanan"/>
-                <h3>Erica Louisse Malabanan</h3>
-                <h4>Research and Development Officer</h4>
+                <p>"As a STEM student, I was able to hone my problem-solving and critical-thinking skills especially after spearheading the development of our prototype. Also, I became more accustomed to working with a team on a high-stakes project."</p>
               </div>
               <div class="aboutus-card">
                 <img src="https://i.imgur.com/6FyXvGa.jpg" class="aboutus-img" alt="Mac Kevin Mantupar"/>
@@ -1139,6 +1225,65 @@
                 <h3>Mark Daniel Manalo</h3>
                 <h4>Technology Application Developer</h4>
               </div>
+            </div>
+            <h3>Business Department</h3>
+            <div class="aboutus-container">
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/VTZ11pX.jpg" class="aboutus-img" alt="Micaela Santoceldes"/>
+                <h3>Micaela Santoceldes</h3>
+                <h4>Business Management Head</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/DUrLjnB.jpg" class="aboutus-img" alt="Maria Christine Dizon"/>
+                <h3>Maria Christine Dizon</h3>
+                <h4>Business Operations Manager</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/2xH7Uwo.jpg" class="aboutus-img" alt="Julianna Mae Marqueses"/>
+                <h3>Julianna Mae Marqueses</h3>
+                <h4>Business Management Officer</h4>
+              </div>
+            </div>
+            <h3>Marketing Department</h3>
+            <div class="aboutus-containermarket">
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/CBlloLI.jpg" class="aboutus-img" alt="Hannah Patricia Galac"/>
+                <h3>Hannah Patricia Galac</h3>
+                <h4>Promotions and Website Manager</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/3MR3Gpg.jpg" class="aboutus-img" alt="Julia Kaye Aranza"/>
+                <h3>Julia Kaye Aranza</h3>
+                <h4>Promotions Officer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/GFRKgJR.jpg" class="aboutus-img" alt="Irron Jovic Jun Brosoto"/>
+                <h3>Irron Jovic Jun Brosoto</h3>
+                <h4>Promotions and Website Head Developer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/Z2shlW9.jpg" class="aboutus-img" alt="Precious Entienza"/>
+                <h3>Precious Entienza</h3>
+                <h4>Design Editor</h4>
+              </div>
+            </div>
+            <h3>Research and Development Department</h3>
+              <div class="aboutus-container">
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/UxdECyT.jpg" class="aboutus-img" alt="Dwayne Aldritz Biscocho"/>
+                <h3>Dwayne Aldritz Biscocho</h3>
+                <h4>Research and Development Head</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/sI3L0Sq.jpg" class="aboutus-img" alt="Erica Louisse Malabanan"/>
+                <h3>Erica Louisse Malabanan</h3>
+                <h4>Research and Development Officer</h4>
+              </div>
+              <div class="aboutus-card">
+                <img src="https://i.imgur.com/73Kza4l.jpg" class="aboutus-img" alt="Jenelle Erika Mendoza"/>
+                <h3>Jenelle Erika Mendoza</h3>
+                <h4>Research and Development Officer</h4>
+                </div>
             </div>
             <h3>This project is maintained by C12-03 Group 2 students of De La Salle Lipa. We are in the early phase so we would be happy to accept feedback from our users.</h3>
             <h3>Contact us:</h3>
